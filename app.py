@@ -15,7 +15,7 @@ class_names = model.names
 
 
 @app.route('/', methods=['GET'])
-def check_status():
+def home():
     return jsonify({
         'message': 'Flask app running successfully'
     }), 200

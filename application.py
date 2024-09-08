@@ -14,10 +14,16 @@ model = YOLO("best.pt")
 class_names = model.names
 
 
-@app.route('/status', methods=['GET'])
+@app.route('/', methods=['GET'])
 def check_status():
     return jsonify({
         'message': 'Flask app running successfully'
+    }), 200
+
+@app.route('/status', methods=['GET'])
+def check_status():
+    return jsonify({
+        'message': 'Status is OK'
     }), 200
 
 
